@@ -1,20 +1,21 @@
-(function(){
+(function () {
 
-    function combine(input1: number | string, input2: number | string) {
-        let  result;
-        if(typeof input1 === 'number' && typeof input2 === 'number'){
-            result = input1 + input2;
-        } else {
-            result = input1.toString() + input2.toString();
-        }
-        return result;
-    } 
+    function add(n1: number, n2: number) {
+        return n1 + n2;
+    }
 
-    const combinedAges = combine(13, 23);
-    const combinedNames = combine("John", "Andy");
+    function printResult(num: number): void {
+        console.log(`Result: ${num}`);
 
-    console.log(combinedAges);
-    console.log(combinedNames);
-    
+    }
+
+
+    printResult(add(2, 3));
+
+    // let combineValues: Function;
+    let combineValues: (a: number, b: number) => number;
+
+    combineValues = add;
+
 
 }());
