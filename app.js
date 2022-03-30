@@ -1,14 +1,16 @@
 (function () {
-    // class Animal {
-    //     constructor(name: string, surname: string) {
-    //         this.name = name;
-    //         this.surname = surname;
-    //     }
-    // }
-    function Person(name, surname) {
-        this.name = name;
-        this.surname = surname;
+    function combine(input1, input2) {
+        var result;
+        if (typeof input1 === 'number' && typeof input2 === 'number') {
+            result = input1 + input2;
+        }
+        else {
+            result = input1.toString() + input2.toString();
+        }
+        return result;
     }
-    var student = new Person("John", "Wick");
-    console.log(student);
+    var combinedAges = combine(13, 23);
+    var combinedNames = combine("John", "Andy");
+    console.log(combinedAges);
+    console.log(combinedNames);
 }());
