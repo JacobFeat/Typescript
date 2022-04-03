@@ -1,21 +1,20 @@
-(function () {
+(async function () {
 
-    function add(n1: number, n2: number) {
-        return n1 + n2;
+    let userInput: unknown;
+    let userName: string;
+
+    userInput = 4;
+    userInput = "John"
+
+    if (typeof userInput === "string") {
+        userName = userInput;
     }
 
-    function printResult(num: number): void {
-        console.log(`Result: ${num}`);
-
+    function generateError(message: string, code: number) {
+        throw { message: message, errorCode: code };
     }
 
-
-    printResult(add(2, 3));
-
-    // let combineValues: Function;
-    let combineValues: (a: number, b: number) => number;
-
-    combineValues = add;
+    // generateError("Error detected!", 500);
 
 
 }());
